@@ -1,8 +1,8 @@
 ---
-title: 씹어먹는 C++정리
+title: "씹어먹는 C++정리"
 date: 2026-07-01 12:00:00 +0900
-categories: [C++ 공부]
-tags: [C++]
+categories: [cpp 공부]
+tags: [cpp]
 ---
 
 # 씹어먹는 C++
