@@ -2,9 +2,10 @@
 ---
 title: "유니티 생존 게임"
 date: 2026-07-01 09:00:00 +0900
-categories: [Protects, Portfolio Projects]
-tags: [C#, Unity]
+categories: [Projects, Portfolio Projects]
+tags: [Csharp Unity]
 ---
+
 
 
 # Unity 서바이벌 게임
