@@ -1,7 +1,7 @@
 ---
 title: "씹어먹는 C++정리"
 date: 2026-07-01 09:00:00 +0900
-categories: [CPP_Study]
+categories: [Study, CPP_Study]
 tags: [CPP]
 ---
 
