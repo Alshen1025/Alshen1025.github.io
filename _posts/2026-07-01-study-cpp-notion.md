@@ -1,8 +1,8 @@
 ---
 title: "씹어먹는 C++정리"
 date: 2026-07-01 09:00:00 +0900
-categories: [cpp 공부]
-tags: [cpp]
+categories: [CPP_Study]
+tags: [CPP]
 ---
 
 # 씹어먹는 C++
@@ -262,7 +262,7 @@ auto f = [&a]() { return a; };
 
 ## 객체란?
 
-![image.png](/assets/img/cpp/c++/image%201.png)
+![image.png](/assets/img/cpp/image-1.png)
 
 - 객체는 자기 만의 정보를 나타내는 변수들고 이를 가지고 어떠한 작업을 하는 함수들로 둘러싸고 있다고 보면 됨.
 - 이런 객체의 변수나 함수를 보통 인스턴스 변수(instance variable)와 인스턴스 메소드(instance method)라고 부름
@@ -366,9 +366,9 @@ Photon_Cannon pc2(pc1);
 
 - 인스턴스 변수를 복사하는 과정에서 각 인스턴스 변수가 같은 주소값을 가짐
 
-![image.png](/assets/img/cpp/image%202.png)
+![image.png](/assets/img/cpp/image-2.png)
 
-![image.png](/assets/img/cpp/image%203.png)
+![image.png](/assets/img/cpp/image-3.png)
 
 - 객체들이 파괴되면서 소멸자를 호출하면 다른 인스턴스 변수는 이미 해제된 변수를 가리키게 되어 댕글링 포인터 발생
 - 이 현상을 해결하려면 변수를 그대로 복사하는게 아니라 다른 메모리에 동적 할당 후 그 내용을 복사해야함
@@ -554,7 +554,7 @@ a+= (b);// 이어서 실행
 - 기반 클래스를 가리키는 포인터가 파생 클래스를 가르켜도 문제 없음
 - Derived is a Base이기 때문에 가능함
 
-![image.png](/assets/img/cpp/image%204.png)
+![image.png](/assets/img/cpp/image-4.png)
 
 ## 다운 캐스팅
 
@@ -597,7 +597,7 @@ a+= (b);// 이어서 실행
 
 - C++ 컴파일러는 가상 함수가 하나라도 존재하는 클래스에 대해서 가상 함수 테이블(Virtual function table; vtable)을 만듬
 
-![image.png](/assets/img/cpp/image%205.png)
+![image.png](/assets/img/cpp/image-5.png)
 
 ## 순수 가상 함수( Pure virtual function)와 추상 클래스(Abstract Class)
 
@@ -617,7 +617,7 @@ virtual void speak() = 0
 
 ## 다이아몬드 상속(Diamond Inheritance)
 
-![image.png](/assets/img/cpp/image%206.png)
+![image.png](/assets/img/cpp/image-6.png)
 
 - Human에 Name이라는 멤버 변수가 있다고 할 때 HandsomeHuman과 SmarHuman은 모두 Human을 상속 받고 있으므로 Name이라는 변수를 가지게 됨.
 - 그런데 Me가 이 두 클래스를 상속받으니 Name이라는 변수가 겹치게됨.
@@ -763,7 +763,7 @@ self.engine=Engine()
 
 ## C++입출력 라이브러리
 
-![image.png](/assets/img/cpp/image%207.png)
+![image.png](/assets/img/cpp/image-7.png)
 
 - C++의 모든 입출력 클래스는 ios_base를 기반 클래스로 함
 - ios_base클래스는 스트림의 입출력 형식 관련 데이터를 처리
@@ -1309,19 +1309,19 @@ int main()
 
 ### 반복자(Iterator)
 
-![image.png](/assets/img/cpp/image%208.png)
+![image.png](/assets/img/cpp/image-8.png)
 
 - 컨테이너 원소에 접근할 수 있는 포인터와 같은 객체
 - 알고리즘 라이브러리에서 대부분이 반복자를 인자로 받아서 알고리즘을 수행함
 - 반복자는 컨테이너의 iterator멤버 타입으로 정의되어 있음.
 
-![image.png](/assets/img/cpp/image%209.png)
+![image.png](/assets/img/cpp/image-9.png)
 
 - 역 반복자도 존재함
 
 ### 리스트(list)
 
-![image.png](/assets/img/cpp/image%2010.png)
+![image.png](/assets/img/cpp/image-10.png)
 
 - 양방향 연결 구조를 가진 자료형
 - 시작 원소와 마지막 원소만을 기억하기 때문에 Vector와는 달리 임의의 위치에 있는 원소에 바로 접근 불가
@@ -1333,7 +1333,7 @@ int main()
 
 ### 덱 (Deque - double ended queue)
 
-![image.png](/assets/img/cpp/image%2011.png)
+![image.png](/assets/img/cpp/image-11.png)
 
 - 벡터와 비슷하게 O(1)으로 임의의 위치의 원소에 접근할 수 있으며 맨 앞, 뒤에 원소를 추가/제거 하는 자업도 O(1)로 수행 가능.
 - 임의의 위치에 있는 원소를 추가/제거에 O(n), 속도도 벡터보다 빠름
@@ -1353,7 +1353,7 @@ int main()
 
 ## 연관 컨테이너
 
-![image.png](/assets/img/cpp/image%2012.png)
+![image.png](/assets/img/cpp/image-12.png)
 
 - 시퀀스 컨테이너와는 다르게 키(Key) - 값(Value) 구조를 가짐
 - 템플릿 라이브러리이기 때문에 키와 값 모두 임의의 타입의 객체가 될 수 있음
@@ -1372,7 +1372,7 @@ int main()
 - 원소가 존재하는지 판별하는 find함수 제공.
 - 중복되는 원소가 없음(원소 중복을 허용하고 싶으면 MultiSet 사용)
 
-![image.png](/assets/img/cpp/image%2013.png)
+![image.png](/assets/img/cpp/image-13.png)
 
 - 셋은 내부적으로 트리 구조를 가지고 있음
 - 트리의 규칙
@@ -1410,7 +1410,7 @@ std::cout << itr->first << " : " << itr->second << " " << std::endl;
 - set과 map의 경우와 다르게 원소들이 순서대로 정렬되어서 들어가지 않음.
 - insert, erase, find 모두가O(1) 으로수행
 
-![image.png](/assets/img/cpp/image%2014.png)
+![image.png](/assets/img/cpp/image-14.png)
 
 - 해시 함수(Hash Function)
     - 1부터 D까지의 값을 반환하고 그 해시값을 원소를 저장할 상자의 번호로 삼음
@@ -1525,12 +1525,12 @@ int main()
 
 ## Shared_ptr
 
-![image.png](/assets/img/cpp/image%2015.png)
+![image.png](/assets/img/cpp/image-15.png)
 
 - 특정 자원을 몇 개의 객체에서 가리키는지를 추적한 다음에 그 수가 0이 되면 해제를 시켜줌
 - 참조 카운트에 직접적으로 접근은 불가함.
 
-![image.png](/assets/img/cpp/image%2016.png)
+![image.png](/assets/img/cpp/image-16.png)
 
 - 포인터가 제어 블록을 동적으로 할당하고 공유 포인터들이 제어블록에 필요한 정보를 공유하는 방식.
 - make_shared로 생성
@@ -1553,7 +1553,7 @@ std::shared_ptr<A> pa2(a)
 
 ### 서로 참조하는 shared_ptr
 
-![image.png](/assets/img/cpp/image%2017.png)
+![image.png](/assets/img/cpp/image-17.png)
 
 - 각 객체가 포인터를 하나씩 가지고 있는데 그 포인터가 서로를 가리키는 상황에서 레퍼런스 카운트가 0이 되지 않음
 - 이걸 순환 참조라고 함.
@@ -1562,7 +1562,7 @@ std::shared_ptr<A> pa2(a)
 
 - shared_ptr의 순환 참조 문제를 해결하기 위한 포인터.
 
-![image.png](/assets/img/cpp/image%2018.png)
+![image.png](/assets/img/cpp/image-18.png)
 
 - 트리를 만든다고 했을 때 부모의 타입을 shared_ptr로 하면 부모와 자식이 서로 순환 참조를 하는 문제가 발생함.
 - weak_ptr은 일반 포인터와 shared_ptr사이에 위치한 스마트 포인터로 객체를 안전하게 참조할 수 있게 해주지만 공유 포인터와 달리 참조 개수를 늘리지는 않음.
@@ -1585,7 +1585,7 @@ std::shared_ptr<A> pa2(a)
 
 ## 컨텍스트 스위칭
 
-![image.png](/assets/img/cpp/image%2019.png)
+![image.png](/assets/img/cpp/image-19.png)
 
 - 겉으로 보기에는 여러 프로그램이 동시에 실행되는 것 처럼 보이지만 프로그램들을 빠르게 바꿔가면서 실행시키는 것.
 - CPU는 운영체제가 처리하라고 하는 명령어를 실행.
@@ -1599,13 +1599,13 @@ std::shared_ptr<A> pa2(a)
 - 여러개의 쓰레드로 구성된 프로그램을 **멀티 쓰레드 프로그램** 이라 함.
 - 프로세스들은 서로 메모리를 공유하지 않지만 같은 프로세스 안의 쓰레드들은 서로 메모리를 공유.
 
-![image.png](/assets/img/cpp/image%2020.png)
+![image.png](/assets/img/cpp/image-20.png)
 
 ## 멀티 쓰레드를 사용하는 이유
 
 ### 병렬가능한(Parallelizable)작업들
 
-![image.png](/assets/img/cpp/image%2021.png)
+![image.png](/assets/img/cpp/image-21.png)
 
 - 1부터 1000까지 더하는 작업같은 경우 단일 쓰레드에서 처리하는 것 보다 멀티 쓰레드를 사용하는게 훨씬 속도가 빠름.
 - 여러개의 다른 쓰레드로 작업을 좀 더 빠르게 수행하는 것을 병렬화(Parallelize)라고 함.
@@ -1617,11 +1617,11 @@ std::shared_ptr<A> pa2(a)
 - 흔히 Ping이라고 부르는 내가 보낸 요청이 상대에게 도착하고 다시 나에게 돌아오는 시간이 환경에 따라 달라짐.
 - 이를 하나의 쓰레드에서 처리하면 대기 시간이 길어 CPU가 비 효율적임
 
-![image.png](/assets/img/cpp/image%2022.png)
+![image.png](/assets/img/cpp/image-22.png)
 
 - 하지만 멀티 쓰레드를 사용하면 기다리는 시간 낭비를 줄일 수 있음
 
-![image.png](/assets/img/cpp/image%2023.png)
+![image.png](/assets/img/cpp/image-23.png)
 
 ## C++에서 쓰레드 생성하기
 
@@ -1744,7 +1744,7 @@ std::lock_guard<std::mutex> lock1(m1);
 - 생산자는 무언가 처리할 일을 받아오는 쓰레드를 의미
 - 소비자는 받은 일을 처리하는 쓰레드를 의미
 
-![image.png](/assets/img/cpp/image%2024.png)
+![image.png](/assets/img/cpp/image-24.png)
 
 - Producer에서 데이터가 간격을 두고 오는 것을 안다면 Producer가 데이터를 줄 때 Consumer를깨우는 것이 효율적
 
@@ -1770,7 +1770,7 @@ cv->wait(lk,
 
 ### 캐시
 
-![image.png](/assets/img/cpp/image%2025.png)
+![image.png](/assets/img/cpp/image-25.png)
 
 - 이를 보완하기 위해 캐시(Cache)도입.
 - 캐시는 CPU에서 연산을 수행하는 부분과 거의 붙어있어 읽기/쓰기 속도가 매우 빠름
